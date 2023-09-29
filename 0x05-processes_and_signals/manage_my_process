@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# manage_my_process script
+# indefinitely write message in a file
 
-while true; do
-  echo "I am alive!" >> /tmp/my_process
-  sleep 2
+while :
+do
+	echo "I am alive!" >> /tmp/my_process
+	sleep 2
 done
-
