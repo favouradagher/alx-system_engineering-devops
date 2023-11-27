@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This script fixes Apache to return a page with "Hello Holberton"
+
+# Start the Docker container with port mapping
+docker run -p 8080:80 -d -it holbertonschool/265-0
+
+# Access the Docker container shell
+docker exec -it $(docker ps -q) /bin/bash
+
+# Inside the container, restart the Apache service
+service apache2 restart
+
+# Exit the container
+exit
+
